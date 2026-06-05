@@ -1,167 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LASTBUY | This Is My Last Buy</title>
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:#050505;
-      color:#fff;
-      overflow-x:hidden;
-    }
-    .bg{
-      position:fixed;inset:0;z-index:-1;
-      background:
-        radial-gradient(circle at 20% 20%,rgba(250,204,21,.18),transparent 28%),
-        radial-gradient(circle at 80% 30%,rgba(34,197,94,.12),transparent 25%),
-        radial-gradient(circle at 50% 90%,rgba(239,68,68,.12),transparent 30%),
-        #050505;
-    }
-    .nav{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:22px 7%;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      position:sticky;top:0;background:rgba(5,5,5,.82);backdrop-filter:blur(12px);z-index:10;
-    }
-    .brand{font-weight:900;font-size:24px;color:#facc15;letter-spacing:1px}
-    .nav a{color:#ddd;text-decoration:none;margin-left:18px;font-weight:700;font-size:14px}
-    .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px}
-    .badge{
-      display:inline-block;padding:10px 16px;border:1px solid rgba(250,204,21,.35);
-      border-radius:999px;color:#facc15;background:rgba(250,204,21,.08);font-weight:800;margin-bottom:22px;
-    }
-    h1{font-size:clamp(48px,9vw,110px);line-height:.9;margin:0;font-weight:1000;letter-spacing:-4px}
-    h1 span{color:#facc15}
-    .sub{max-width:760px;margin:25px auto 0;color:#d1d5db;font-size:clamp(18px,2.4vw,26px);line-height:1.5}
-    .buttons{margin-top:34px}
-    .btn{
-      display:inline-block;padding:16px 28px;margin:8px;border-radius:12px;text-decoration:none;
-      font-weight:900;border:1px solid rgba(255,255,255,.15);
-    }
-    .primary{background:#facc15;color:#050505}
-    .secondary{background:rgba(255,255,255,.06);color:#fff}
-    section{padding:80px 7%;max-width:1200px;margin:auto}
-    .title{font-size:clamp(34px,5vw,58px);margin:0 0 18px;font-weight:1000;letter-spacing:-2px}
-    .muted{color:#b8b8b8;font-size:20px;line-height:1.7}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:20px;
-      padding:28px;
-      box-shadow:0 20px 60px rgba(0,0,0,.25);
-    }
-    .card h3{margin:0 0 10px;color:#facc15;font-size:22px}
-    .card p{color:#cfcfcf;line-height:1.6;font-size:17px}
-    .bigquote{
-      font-size:clamp(28px,5vw,62px);
-      line-height:1.08;
-      font-weight:1000;
-      color:#facc15;
-      text-align:center;
-      padding:70px 20px;
-      border-top:1px solid rgba(255,255,255,.1);
-      border-bottom:1px solid rgba(255,255,255,.1);
-    }
-    .token{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px;margin-top:25px
-    }
-    .token div{
-      padding:24px;border-radius:18px;background:#0e0e0e;border:1px solid rgba(255,255,255,.1)
-    }
-    .token strong{display:block;color:#facc15;font-size:14px;text-transform:uppercase;margin-bottom:8px}
-    .token span{font-size:24px;font-weight:900}
-    .no-roadmap{text-align:center;background:rgba(250,204,21,.06);border-radius:26px;border:1px solid rgba(250,204,21,.18)}
-    .footer{text-align:center;padding:55px 20px;color:#aaa;border-top:1px solid rgba(255,255,255,.08)}
-    .ticker{font-size:34px;font-weight:1000;color:#facc15}
-    @media(max-width:700px){.nav a{display:none}h1{letter-spacing:-2px}}
-  </style>
+<title>LASTBUY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;background:#050505;color:white;font-family:Arial;text-align:center}
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+h1{font-size:72px;color:#facc15;margin:0}
+p{font-size:22px;color:#ddd}
+.btn{display:inline-block;margin:12px;padding:16px 30px;background:#facc15;color:#000;text-decoration:none;font-weight:bold;border-radius:10px}
+.section{padding:70px 20px;max-width:900px;margin:auto}
+.card{background:#111;padding:28px;border-radius:18px;margin:18px 0;border:1px solid #333}
+.music{position:fixed;bottom:20px;right:20px;background:#facc15;color:#000;border:0;padding:14px 20px;border-radius:999px;font-weight:bold;z-index:99}
+</style>
 </head>
 <body>
-<div class="bg"></div>
 
-<div class="nav">
-  <div class="brand">$LASTBUY</div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#community">Community</a>
-  </div>
-</div>
+<button class="music" onclick="playMusic()">PLAY MUSIC</button>
 
 <div class="hero">
-  <div>
-    <div class="badge">THE OFFICIAL COIN OF EVERY TRADER'S LAST BUY</div>
-    <h1>THIS IS MY <span>LAST BUY.</span></h1>
-    <p class="sub">Nobody knows the bottom. Everybody buys anyway. Built for dip buyers, FOMO traders, exit liquidity providers, and people who swore they were done.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#">BUY NOW</a>
-      <a class="btn secondary" href="#">VIEW CHART</a>
-    </div>
-  </div>
+<div>
+<h1>THIS IS MY LAST BUY.</h1>
+<p>The Official Coin Of Every Trader's Last Buy.</p>
+<p>Nobody knows the bottom. Everybody buys anyway.</p>
+<a class="btn" href="#">BUY NOW</a>
+<a class="btn" href="#">VIEW CHART</a>
+</div>
 </div>
 
-<section id="about">
-  <h2 class="title">We Have Seen This Before.</h2>
-  <p class="muted">
-    Bitcoin crashed. We bought. Bitcoin pumped. We bought. Bitcoin crashed again. We bought again.
-    Every trader thinks they have one last buy. They never do.
-  </p>
-  <div class="grid">
-    <div class="card"><h3>Universal</h3><p>Every crypto trader has said it at least once: “This is my last buy.”</p></div>
-    <div class="card"><h3>Timeless</h3><p>Works in bull markets, bear markets, chop markets, and full panic.</p></div>
-    <div class="card"><h3>No Fake Utility</h3><p>No fake promises. No fake partnerships. Just one more buy.</p></div>
-  </div>
-</section>
-
-<div class="bigquote">
-  “My wife thinks I stopped buying.<br>She was wrong.”
+<div class="section">
+<h2>WHAT IS LASTBUY?</h2>
+<div class="card">
+LASTBUY is the official coin of every trader who promised:
+<br><br>
+“This is my last buy.”
+<br><br>
+And then bought again. And again. And again.
 </div>
 
-<section id="tokenomics">
-  <h2 class="title">Tokenomics</h2>
-  <p class="muted">Simple. Clean. Meme-first.</p>
-  <div class="token">
-    <div><strong>Total Supply</strong><span>1B</span></div>
-    <div><strong>Tax</strong><span>0%</span></div>
-    <div><strong>Network</strong><span>Solana</span></div>
-    <div><strong>Liquidity</strong><span>Locked</span></div>
-    <div><strong>Ownership</strong><span>Renounced</span></div>
-  </div>
-</section>
-
-<section>
-  <div class="no-roadmap card">
-    <h2 class="title">No Roadmap.</h2>
-    <p class="muted">
-      The roadmap was simple.<br>
-      Stop buying. Move on. Touch grass.<br><br>
-      We failed.
-    </p>
-  </div>
-</section>
-
-<section id="community">
-  <h2 class="title">Community Quotes</h2>
-  <div class="grid">
-    <div class="card"><h3>Last Buy #12</h3><p>“Trust me bro. This is really the last one.”</p></div>
-    <div class="card"><h3>Last Buy #43</h3><p>“I sold my last buy to fund my next last buy.”</p></div>
-    <div class="card"><h3>Last Buy #89</h3><p>“Bottom confirmed.”<br><br>-20% later: “Last buy again.”</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="bigquote">ONE MORE TIME.</div>
-</section>
-
-<div class="footer">
-  <div class="ticker">$LASTBUY</div>
-  <p>The Official Coin Of Every Trader's Last Buy.</p>
-  <p>Nobody knows the bottom. Everybody buys anyway.</p>
+<h2>NO ROADMAP</h2>
+<div class="card">
+The roadmap was simple.
+<br><br>
+Stop buying. Move on. Touch grass.
+<br><br>
+We failed.
 </div>
+
+<h2>TOKENOMICS</h2>
+<div class="card">
+Supply: 1,000,000,000<br><br>
+Tax: 0%<br><br>
+Chain: Solana<br><br>
+Liquidity: Locked
+</div>
+
+<h2 style="color:#facc15;">ONE MORE TIME.</h2>
+<p>My wife thinks I stopped buying. She was wrong.</p>
+</div>
+
+<script>
+let started=false;
+function playMusic(){
+ if(started)return;
+ started=true;
+ const ctx=new AudioContext();
+ const notes=[55,73,82,110];
+ notes.forEach((f,i)=>{
+  const osc=ctx.createOscillator();
+  const gain=ctx.createGain();
+  osc.type="sine";
+  osc.frequency.value=f;
+  gain.gain.value=0.05;
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.start(ctx.currentTime+i*0.4);
+ });
+ alert("Music started");
+}
+</script>
+
 </body>
 </html>
