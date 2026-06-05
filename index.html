@@ -5,19 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#030303;color:white;font-family:Impact,Arial,sans-serif;text-align:center}
-.hero{min-height:100vh;padding:70px 18px;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.95)),url("https://images.unsplash.com/photo-1640340434855-6084b1f4901c?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center}
-.logo{position:fixed;top:20px;left:20px;color:#ffcc00;font-size:42px;z-index:9}
-h1{font-size:82px;line-height:.9;margin:0;color:#ffcc00;text-shadow:4px 4px #000}
-.sub{font-size:34px;line-height:1.25;color:white;text-shadow:3px 3px #000;margin:28px 0}
-.red{color:#ff3333}
-.btn{display:inline-block;margin:12px;padding:18px 34px;background:#ffcc00;color:#000;text-decoration:none;border-radius:14px;font-size:28px}
-.section{padding:70px 18px}
-h2{font-size:56px;color:#ffcc00;margin:20px 0}
-.card{background:#111;border:2px solid #ffcc00;border-radius:18px;padding:28px;margin:22px auto;max-width:850px;font-size:32px;line-height:1.3}
-.meme-img{width:100%;max-width:520px;border:4px solid #ffcc00;border-radius:20px;margin:25px auto;display:block;background:#111}
-.meme{font-size:46px;color:white}
-.footer{padding:60px 20px;font-size:28px;color:#aaa}
+body{
+  margin:0;
+  background:#050000;
+  color:white;
+  font-family:Impact,Arial,sans-serif;
+  text-align:center;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+  radial-gradient(circle at 20% 20%,rgba(255,0,0,.28),transparent 30%),
+  radial-gradient(circle at 80% 10%,rgba(255,204,0,.18),transparent 28%),
+  radial-gradient(circle at 50% 90%,rgba(255,0,0,.22),transparent 35%);
+  z-index:-1;
+}
+.logo{
+  position:fixed;
+  top:18px;
+  left:18px;
+  color:#ffcc00;
+  font-size:36px;
+  text-shadow:4px 4px #000;
+  z-index:10;
+}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 18px;
+}
+h1{
+  font-size:92px;
+  line-height:.86;
+  margin:0;
+  color:#ffcc00;
+  text-shadow:6px 6px #000;
+}
+.sub{
+  margin:30px auto;
+  max-width:850px;
+  font-size:38px;
+  line-height:1.15;
+  text-shadow:4px 4px #000;
+}
+.red{color:#ff2b2b}
+.btn{
+  display:inline-block;
+  margin:12px;
+  padding:18px 34px;
+  background:#ffcc00;
+  color:#000;
+  text-decoration:none;
+  border-radius:14px;
+  font-size:30px;
+  box-shadow:7px 7px 0 #000;
+}
+.section{
+  padding:70px 18px;
+}
+h2{
+  font-size:62px;
+  color:#ffcc00;
+  text-shadow:5px 5px #000;
+  margin:28px 0;
+}
+.card{
+  max-width:900px;
+  margin:25px auto;
+  background:#111;
+  border:3px solid #ffcc00;
+  border-radius:20px;
+  padding:34px 22px;
+  font-size:34px;
+  line-height:1.3;
+  box-shadow:10px 10px 0 #000;
+}
+.big{
+  font-size:52px;
+  color:white;
+}
+.warning{
+  background:#350000;
+  border-color:#ff2b2b;
+}
+.footer{
+  padding:70px 20px;
+  font-size:32px;
+  color:#bbb;
+}
+@media(max-width:600px){
+  h1{font-size:62px}
+  h2{font-size:42px}
+  .sub{font-size:28px}
+  .card{font-size:26px}
+  .big{font-size:34px}
+  .btn{font-size:24px}
+}
 </style>
 </head>
 
@@ -26,80 +113,92 @@ h2{font-size:56px;color:#ffcc00;margin:20px 0}
 <div class="logo">$LASTBUY</div>
 
 <div class="hero">
-<div>
-<h1>THIS IS MY<br>LAST BUY.</h1>
-<div class="sub">
-I said this yesterday.<br>
-I said this last week.<br>
-<span class="red">I lied every time.</span>
-</div>
-<a class="btn" href="#">BUY AGAIN</a>
-<a class="btn" href="#">CRY CHART</a>
-</div>
+  <div>
+    <h1>THIS IS MY<br>LAST BUY.</h1>
+    <div class="sub">
+      I said it yesterday.<br>
+      I said it last week.<br>
+      <span class="red">I lied every single time.</span>
+    </div>
+    <a class="btn" href="#">BUY AGAIN</a>
+    <a class="btn" href="#">CRY CHART</a>
+  </div>
 </div>
 
 <div class="section">
 
 <h2>THE PAIN</h2>
-<img class="meme-img" src="pain.png">
-<div class="card">
-Bought the dip.<br>
-Dip kept dipping.<br>
-Portfolio -90%.<br><br>
+<div class="card warning">
+Day 1: Bought the dip.<br><br>
+Day 2: Dip kept dipping.<br><br>
+Day 3: Portfolio -70%.<br><br>
+Day 4: Told myself I am early.<br><br>
+Day 5: Started checking every 3 minutes.<br><br>
 <span class="red">Still holding.</span>
 </div>
 
-<h2>I SAID IT WAS MY LAST BUY</h2>
-<img class="meme-img" src="buy.png">
+<h2>THE LIE</h2>
 <div class="card">
-One more buy.<br>
-Just one more.<br>
-Trust me bro.<br><br>
-<span class="red">Last Buy #37.</span>
+No more charts.<br><br>
+No more memes.<br><br>
+No more pain.<br><br>
+No more buying.<br><br>
+<span class="red">Then I bought again.</span>
 </div>
 
-<h2>WHY IS IT STILL DUMPING?</h2>
-<img class="meme-img" src="rage.png">
-<div class="card">
-Bought the bottom.<br>
-Found another bottom.<br>
-And another one.<br><br>
-<span class="red">I am not okay.</span>
+<h2>THE RAGE</h2>
+<div class="card warning">
+Bought the bottom.<br><br>
+Found another bottom.<br><br>
+Bought that bottom too.<br><br>
+Found another bottom again.<br><br>
+<span class="red">I AM THE EXIT LIQUIDITY.</span>
 </div>
 
 <h2>NO ROADMAP</h2>
 <div class="card">
-The roadmap was to stop buying.<br><br>
-We failed.
+The roadmap was simple.<br><br>
+Stop buying.<br><br>
+Move on.<br><br>
+Touch grass.<br><br>
+<span class="red">We failed.</span>
 </div>
 
 <h2>HOLDER THERAPY</h2>
-<div class="card meme">
+<div class="card big">
 “Bro this is my last buy.”<br><br>
-Last Buy #37
+<span class="red">Last Buy #37</span>
 </div>
 
-<div class="card meme">
+<div class="card big">
 “My wife thinks I stopped buying.”<br><br>
 <span class="red">She was wrong.</span>
 </div>
 
 <h2>TOKENOMICS</h2>
 <div class="card">
-Supply: 1,000,000,000<br>
-Tax: 0%<br>
-Chain: Solana<br>
-LP: Burned
+Supply: 1,000,000,000<br><br>
+Tax: 0%<br><br>
+Chain: Solana<br><br>
+LP: Burned<br><br>
+No VC. No Presale. No Mercy.
 </div>
 
-<h2>ONE MORE TIME?</h2>
-<a class="btn" href="#">YES, I AM STUPID</a>
+<h2>FINAL QUESTION</h2>
+<div class="card big warning">
+This is my last buy.<br><br>
+RIGHT?<br><br>
+<span class="red">RIGHT???</span>
+</div>
+
+<a class="btn" href="#">BUY THE DIP</a>
 
 </div>
 
 <div class="footer">
 Nobody knows the bottom.<br>
-Everybody buys anyway.
+Everybody buys anyway.<br><br>
+$LASTBUY
 </div>
 
 </body>
