@@ -4,92 +4,176 @@
 <title>LASTBUY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body{margin:0;background:#050505;color:white;font-family:Arial;text-align:center}
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:20px;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#050505;
+  color:#f5f5f5;
+  font-family:Arial,Helvetica,sans-serif;
 }
-h1{font-size:72px;color:#facc15;margin:0}
-p{font-size:22px;color:#ddd}
-.btn{display:inline-block;margin:12px;padding:16px 30px;background:#facc15;color:#000;text-decoration:none;font-weight:bold;border-radius:10px}
-.section{padding:70px 20px;max-width:900px;margin:auto}
-.card{background:#111;padding:28px;border-radius:18px;margin:18px 0;border:1px solid #333}
-.music{position:fixed;bottom:20px;right:20px;background:#facc15;color:#000;border:0;padding:14px 20px;border-radius:999px;font-weight:bold;z-index:99}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 22px;
+  background:
+  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.9)),
+  url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+}
+.brand{
+  position:fixed;
+  top:24px;
+  left:24px;
+  color:#c9a227;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:22px;
+}
+.tag{
+  color:#c9a227;
+  border:1px solid rgba(201,162,39,.45);
+  padding:12px 22px;
+  border-radius:999px;
+  display:inline-block;
+  margin-bottom:28px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+h1{
+  font-size:70px;
+  line-height:.95;
+  margin:0;
+  color:#fff;
+  letter-spacing:-2px;
+}
+h1 span{color:#c9a227}
+p{
+  color:#d1d1d1;
+  font-size:21px;
+  line-height:1.7;
+}
+.btn{
+  display:inline-block;
+  margin:12px;
+  padding:15px 30px;
+  border-radius:999px;
+  border:1px solid #c9a227;
+  color:#c9a227;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:1px;
+}
+.btn.gold{
+  background:#c9a227;
+  color:#050505;
+}
+.section{
+  padding:80px 24px;
+  max-width:950px;
+  margin:auto;
+  text-align:center;
+}
+.card{
+  background:linear-gradient(180deg,#111,#070707);
+  border:1px solid rgba(201,162,39,.25);
+  border-radius:22px;
+  padding:32px;
+  margin:22px 0;
+}
+h2{
+  color:#c9a227;
+  font-size:36px;
+}
+.quote{
+  font-size:42px;
+  color:#fff;
+  font-weight:900;
+  line-height:1.2;
+}
+.footer{
+  text-align:center;
+  padding:50px 20px;
+  color:#888;
+}
+@media(max-width:600px){
+  h1{font-size:52px}
+  p{font-size:18px}
+}
 </style>
 </head>
 <body>
 
-<button class="music" onclick="playMusic()">PLAY MUSIC</button>
+<div class="brand">$LASTBUY</div>
 
 <div class="hero">
-<div>
-<h1>THIS IS MY LAST BUY.</h1>
-<p>The Official Coin Of Every Trader's Last Buy.</p>
-<p>Nobody knows the bottom. Everybody buys anyway.</p>
-<a class="btn" href="#">BUY NOW</a>
-<a class="btn" href="#">VIEW CHART</a>
-</div>
+  <div>
+    <div class="tag">NO VC · NO PRESALE · NO INSIDERS</div>
+    <h1>THE FINAL <span>CONVICTION.</span></h1>
+    <p>
+      Everyone says it.<br>
+      Nobody means it.<br><br>
+      This is my last buy.
+    </p>
+    <a class="btn gold" href="#">BUY NOW</a>
+    <a class="btn" href="#">VIEW CHART</a>
+  </div>
 </div>
 
 <div class="section">
-<h2>WHAT IS LASTBUY?</h2>
-<div class="card">
-LASTBUY is the official coin of every trader who promised:
-<br><br>
-“This is my last buy.”
-<br><br>
-And then bought again. And again. And again.
+  <h2>WHAT IS LASTBUY?</h2>
+  <div class="card">
+    <p>
+      LASTBUY is the official coin of every trader who promised they were done.
+      <br><br>
+      Then the chart dipped.
+      <br><br>
+      Then conviction returned.
+      <br><br>
+      And one more buy became destiny.
+    </p>
+  </div>
+
+  <h2>NO ROADMAP</h2>
+  <div class="card">
+    <p>
+      The roadmap was simple:
+      <br><br>
+      Stop buying. Move on. Touch grass.
+      <br><br>
+      We failed.
+    </p>
+  </div>
+
+  <h2>TOKENOMICS</h2>
+  <div class="card">
+    <p>
+      Supply: 1,000,000,000<br>
+      Tax: 0%<br>
+      Chain: Solana<br>
+      Liquidity: Locked<br>
+      Ownership: Renounced
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="quote">
+      “My wife thinks I stopped buying.<br>
+      She was wrong.”
+    </div>
+  </div>
+
+  <h2>ONE MORE TIME.</h2>
+  <a class="btn gold" href="#">ENTER THE LAST BUY</a>
 </div>
 
-<h2>NO ROADMAP</h2>
-<div class="card">
-The roadmap was simple.
-<br><br>
-Stop buying. Move on. Touch grass.
-<br><br>
-We failed.
+<div class="footer">
+  $LASTBUY<br>
+  Nobody knows the bottom. Everybody buys anyway.
 </div>
-
-<h2>TOKENOMICS</h2>
-<div class="card">
-Supply: 1,000,000,000<br><br>
-Tax: 0%<br><br>
-Chain: Solana<br><br>
-Liquidity: Locked
-</div>
-
-<h2 style="color:#facc15;">ONE MORE TIME.</h2>
-<p>My wife thinks I stopped buying. She was wrong.</p>
-</div>
-
-<script>
-let started=false;
-function playMusic(){
- if(started)return;
- started=true;
- const ctx=new AudioContext();
- const notes=[55,73,82,110];
- notes.forEach((f,i)=>{
-  const osc=ctx.createOscillator();
-  const gain=ctx.createGain();
-  osc.type="sine";
-  osc.frequency.value=f;
-  gain.gain.value=0.05;
-  osc.connect(gain);
-  gain.connect(ctx.destination);
-  osc.start(ctx.currentTime+i*0.4);
- });
- alert("Music started");
-}
-</script>
 
 </body>
 </html>
